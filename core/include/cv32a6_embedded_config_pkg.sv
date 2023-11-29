@@ -50,7 +50,7 @@ package cva6_config_pkg;
 
   localparam CVA6ConfigFPGAEn = 0;
 
-  localparam CVA6ConfigNrLoadPipeRegs = 1;
+  localparam CVA6ConfigNrLoadPipeRegs = 0;
   localparam CVA6ConfigNrStorePipeRegs = 0;
   localparam CVA6ConfigNrLoadBufEntries = 2;
 
@@ -59,7 +59,7 @@ package cva6_config_pkg;
 
   localparam CVA6ConfigRASDepth = 0;
   localparam CVA6ConfigBTBEntries = 0;
-  localparam CVA6ConfigBHTEntries = 0;
+  localparam CVA6ConfigBHTEntries = 16;
 
   localparam CVA6ConfigNrPMPEntries = 8;
 
@@ -137,7 +137,8 @@ package cva6_config_pkg;
       CachedRegionAddrBase: 1024'({64'h8000_0000}),
       CachedRegionLength: 1024'({64'h40000000}),
       MaxOutstandingStores: unsigned'(7),
-      DebugEn: bit'(0)
+      DebugEn: bit'(0),
+      NonIdemPotenceEn: bit'(0)
   };
 
 endpackage
